@@ -36,24 +36,3 @@ tasks.withType<KotlinCompile> {
 application {
     mainClass.set("MainKt")
 }
-
-
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "cn.mucute"
-            artifactId = "netrut"
-            version = "1.0.1"
-            from(components["kotlin"])
-        }
-    }
-    repositories {
-        maven {
-            url = uri("https://maven.mucute.cn/repository/mucute/")
-            credentials {
-                username = "admin"
-                password = "Muc244048880..."
-            }
-        }
-    }
-}
